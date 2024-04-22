@@ -434,9 +434,30 @@ else
 
     sleep 1
 
+    update_go_path
+
+    sleep 1
+
     install_docker
 
     sleep 1
 
+   install_docker_compose
+
+    sleep 1
+
+   add_user_to_docker_group 
+
+   sleep 1
+
+   download_fabric_binaries
+
+   sleep 1
+
+   update_fabric_path
+
+   sleep 1
+
+   apply_new_group_membership
 
 fi
