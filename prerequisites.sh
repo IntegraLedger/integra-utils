@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eo pipefail
+
 
 update_apt_repository() {
     sudo apt-get update
