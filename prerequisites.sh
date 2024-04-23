@@ -70,10 +70,7 @@ install_nodejs() {
     echo ""
     echo ""
 
-    curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
-
-    sudo apt-get install nodejs -y
-
+    sudo apt install nodejs -y
 }
 
 install_npm() {
@@ -86,7 +83,7 @@ install_npm() {
     echo ""
     echo ""
     
-    sudo apt install npm -y || true
+    sudo apt install npm -y  || true
 }
 
 install_nvm() {
