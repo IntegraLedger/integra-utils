@@ -86,7 +86,7 @@ install_npm() {
     echo ""
     echo ""
     
-    sudo apt install npm -y
+    sudo apt install npm -y || true
 }
 
 install_nvm() {
