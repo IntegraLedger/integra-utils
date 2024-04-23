@@ -69,8 +69,11 @@ install_nodejs() {
     echo "========================================================================"
     echo ""
     echo ""
-    
-    sudo apt install nodejs -y
+
+    curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+
+    sudo apt-get install nodejs -y
+
 }
 
 install_npm() {
@@ -185,7 +188,7 @@ install_docker() {
 
         set -x
 
-        sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        sudo curl -L "https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
         
         sudo chmod +x /usr/local/bin/docker-compose
 
@@ -280,7 +283,7 @@ install_docker_compose() {
     echo ""
     echo ""
 
-    sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    sudo curl -L "https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
         
     sudo chmod +x /usr/local/bin/docker-compose
 }
